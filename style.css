@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #e74c3c;
+}
+
+.mode-selector {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #ecf0f1;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.mode-btn.active {
+    background: #e74c3c;
+    color: white;
+}
+
+.timer {
+    font-size: 5rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    border: none;
+    background: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#task-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#tasks li {
+    list-style: none;
+    padding: 20px;
+    background: #f9f9f9;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Мобильные стили (для экранов ≤ 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+        border-radius: 0;
+    }
+
+    .timer {
+        font-size: 3.5rem; /* Уменьшаем размер таймера */
+        margin: 15px 0;
+    }
+
+    .mode-selector {
+        flex-direction: column; /* Кнопки вертикально */
+        gap: 8px;
+    }
+
+    .mode-btn {
+        margin: 0;
+    }
+
+    .controls {
+        flex-wrap: wrap; /* Кнопки в 2 ряда при нехватке места */
+    }
+
+    .controls button {
+        flex: 1 0 45%; /* Гибкие кнопки */
+        margin: 5px;
+    }
+
+    .task-list {
+        margin-top: 20px;
+    }
+
+    #task-input {
+        font-size: 16px; /* Увеличиваем шрифт для удобства */
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #121212;
+        color: #eee;
+    }
+    .container {
+        background: #1e1e1e;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+    #task-input, #tasks li {
+        background: #2d2d2d;
+        color: #fff;
+    }
+    .mode-btn:not(.active) {
+        background: #333;
+    }
+}
