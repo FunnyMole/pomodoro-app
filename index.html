@@ -6,7 +6,9 @@
     <title>Pomodoro Timer</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="theme-color" content="#e74c3c"> <!-- Цвет статус-бара -->
+    <!--  <meta name="theme-color" content="#e74c3c"> Цвет статус-бара -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e74c3c"> <!-- Должен совпадать с theme_color из manifest -->
 </head>
 <body>
     <div class="container">
@@ -34,6 +36,7 @@
             <ul id="tasks"></ul>
         </div>
     </div>
+    
 <ul id="tasks"></ul>
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>

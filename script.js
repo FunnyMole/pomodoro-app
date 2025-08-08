@@ -25,6 +25,14 @@ const pauseBtn = document.getElementById("pause-btn");
 const resetBtn = document.getElementById("reset-btn");
 const modeButtons = document.querySelectorAll(".mode-btn");
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => console.log('SW registered:', registration))
+      .catch(error => console.log('SW failed:', error));
+  });
+}
+
 // ===== Отображение задач =====
 function renderTasks() {
     tasksList.innerHTML = "";
