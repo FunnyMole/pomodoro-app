@@ -161,3 +161,16 @@ h1 {
         background: #333;
     }
 }
+@media (max-width: 480px) {
+  .timer-display {
+    font-size: 3rem;
+  }
+  
+  .mode-buttons, .control-buttons {
+    flex-direction: column;
+  }
+  
+  .task-input {
+    font-size: 16px;
+  }
+}
