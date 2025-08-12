@@ -101,7 +101,7 @@ h1 {
 }
 
 /* Мобильные стили (для экранов ≤ 600px) */
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     body {
         padding: 10px;
         font-size: 16px;
